@@ -1,0 +1,85 @@
+// prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  username          String?
+  email         String?   @unique
+  password      String?
+  emailVerified DateTime?
+  image         String?
+  likedTracks Track[]  @relation("UserLikedTracks")
+  favoriteArtists Artist[] @relation("UserFavoriteArtists")
+  accounts      Account[]
+  sessions      Session[]
+}
+
+model Track {
+  id        Int      @id @default(autoincrement())
+  title     String
+  artistId  Int
+  artist    Artist   @relation("ArtistTracks", fields: [artistId], references: [id])
+  albumId   Int?
+  album     Album?   @relation("AlbumTracks", fields: [albumId], references: [id])
+  duration  Int      // in seconds
+  audioUrl  String   // path or URL to the audio file
+  likedBy   User[]   @relation("UserLikedTracks")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Artist {
+  id       Int      @id @default(autoincrement())
+  name     String
+  albums   Album[]  @relation("ArtistAlbums")
+  tracks   Track[]  @relation("ArtistTracks")
+  imageUrl String?
+  favoritedBy User[]  @relation("UserFavoriteArtists")  
+  // Add more fields if needed, such as genre, bio, etc.
+}
+
+model Album {
+  id        Int      @id @default(autoincrement())
+  title     String
+  artistId  Int
+  artist    Artist   @relation("ArtistAlbums", fields: [artistId], references: [id])
+  coverUrl  String?
+  tracks    Track[]  @relation("AlbumTracks")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Account {
+  id                 String  @id @default(cuid())
+  userId             String
+  type               String
+  provider           String
+  providerAccountId  String
+  refresh_token      String?  @db.Text
+  access_token       String?  @db.Text
+  expires_at         Int?
+  token_type         String?
+  scope              String?
+  id_token           String?  @db.Text
+  session_state      String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}

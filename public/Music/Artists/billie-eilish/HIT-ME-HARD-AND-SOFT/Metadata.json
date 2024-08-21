@@ -1,0 +1,38 @@
+
+  {
+    "Name": "Hit Me Hard And Soft",
+    "Artist": "Billie Eilish",
+    "Cover": "/assets/images/lana del ray.jpg",
+    "tracks": [
+      {
+      "id": "1",
+      "name": "Birds of a feather",
+      "artist": "Billie Eilish",
+      "url": "/Music/HIT-ME-HARD-AND-SOFT/BIRDS OF A FEATHER - Billie Eilish (320).mp3"
+      },
+    {
+      "id": "2",
+      "name": "Bittersuite",
+      "artist": "Billie Eilish",
+      "url": "/Music/HIT-ME-HARD-AND-SOFT/BITTERSUITE - Billie Eilish (320).mp3"
+    },
+    {
+      "id": "3",
+      "name": "Blue",
+      "artist": "Billie Eilish",
+      "url": "/Music/HIT-ME-HARD-AND-SOFT/BLUE - Billie Eilish (320).mp3"
+    },
+    {
+      "id": "4",
+      "name": "CHIHIRO",
+      "artist": "Billie Eilish",
+      "url": "/Music/HIT-ME-HARD-AND-SOFT/CHIHIRO - Billie Eilish (320).mp3"
+    },
+    {
+      "id": "5",
+      "name": "L AMOUR DE MA VIE",
+      "artist": "Billie Eilish",
+      "url": "/Music/HIT-ME-HARD-AND-SOFT/L AMOUR DE MA VIE - Billie Eilish (320).mp3"
+    }
+    ]
+  }

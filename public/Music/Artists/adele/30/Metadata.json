@@ -1,0 +1,73 @@
+{
+  "Album_Name": "30",
+  "Artist_name": " Adele",
+  "Cover": "/assets/images/adele.jpg",
+  "tracks": [
+    {
+      "id": "1",
+      "name": "All Night Parking Interlude",
+      "artist": "Adele",
+      "url": "/Music/30/Adele-All-Night-Parking-Interlude-plisten.mp3"
+    },
+    {
+      "id": "2",
+      "name": "Can I Get It",
+      "artist": "Adele",
+      "url": "/Music/30/Adele-Can-I-Get-It-plisten.mp3"
+    },
+    {
+      "id": "3",
+      "name": "Cry Your Heart Out",
+      "artist": "Adele",
+      "url": "/Music/30/Adele-Cry-Your-Heart-Out-plisten.mp3"
+    },
+    {
+      "id": "4",
+      "name": "Easy On Me",
+      "artist": "Adele",
+      "url": "/Music/30/Adele-Easy-On-Me-plisten.mp3"
+    },
+    {
+      "id": "5",
+      "name": "Hold On",
+      "artist": "Adele",
+      "url": "/Music/30/Adele-Hold-On-plisten.mp3"
+    },
+    {
+        "id": "5",
+        "name": "I Drink Wine",
+        "artist": "Adele",
+        "url": "/Music/30/Adele-I-Drink-Wine-plisten.mp3"
+      },{
+        "id": "6",
+        "name": "Love Is A Game",
+        "artist": "Adele",
+        "url": "/Music/30/Adele-Love-Is-A-Game-plisten.mp3"
+      },{
+        "id": "7",
+        "name": "My Little Love",
+        "artist": "Adele",
+        "url": "/Music/30/Adele-My-Little-Love-plisten.mp3"
+      },{
+        "id": "8",
+        "name": "Oh My God",
+        "artist": "Adele",
+        "url": "/Music/30/Adele-Oh-My-God-plisten.mp3"
+      },{
+        "id": "9",
+        "name": "Strangers By Nature",
+        "artist": "Adele",
+        "url": "/Music/30/Adele-Strangers-By-Nature-plisten.mp3"
+      },{
+        "id": "10",
+        "name": "To Be Loved",
+        "artist": "Adele",
+        "url": "/Music/30/Adele-To-Be-Loved-plisten.mp3"
+      },{
+        "id": "11",
+        "name": "Woman Like Me",
+        "artist": "Adele",
+        "url": "/Music/30/Adele-Woman-Like-Me-plisten.mp3"
+      }
+  ]
+}

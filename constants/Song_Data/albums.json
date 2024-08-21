@@ -1,0 +1,234 @@
+[
+{
+    "Album_Name": "30",
+    "Artist_name": " Adele",
+    "Cover": "/assets/images/adele.jpg",
+    "tracks": [
+      {
+        "id": "1",
+        "name": "All Night Parking Interlude",
+        "artist": "Adele",
+        "url": "/Music/30/Adele-All-Night-Parking-Interlude-plisten.mp3"
+      },
+      {
+        "id": "2",
+        "name": "Can I Get It",
+        "artist": "Adele",
+        "url": "/Music/30/Adele-Can-I-Get-It-plisten.mp3"
+      },
+      {
+        "id": "3",
+        "name": "Cry Your Heart Out",
+        "artist": "Adele",
+        "url": "/Music/30/Adele-Cry-Your-Heart-Out-plisten.mp3"
+      },
+      {
+        "id": "4",
+        "name": "Easy On Me",
+        "artist": "Adele",
+        "url": "/Music/30/Adele-Easy-On-Me-plisten.mp3"
+      },
+      {
+        "id": "5",
+        "name": "Hold On",
+        "artist": "Adele",
+        "url": "/Music/30/Adele-Hold-On-plisten.mp3"
+      },
+      {
+          "id": "5",
+          "name": "I Drink Wine",
+          "artist": "Adele",
+          "url": "/Music/30/Adele-I-Drink-Wine-plisten.mp3"
+        },{
+          "id": "6",
+          "name": "Love Is A Game",
+          "artist": "Adele",
+          "url": "/Music/30/Adele-Love-Is-A-Game-plisten.mp3"
+        },{
+          "id": "7",
+          "name": "My Little Love",
+          "artist": "Adele",
+          "url": "/Music/30/Adele-My-Little-Love-plisten.mp3"
+        },{
+          "id": "8",
+          "name": "Oh My God",
+          "artist": "Adele",
+          "url": "/Music/30/Adele-Oh-My-God-plisten.mp3"
+        },{
+          "id": "9",
+          "name": "Strangers By Nature",
+          "artist": "Adele",
+          "url": "/Music/30/Adele-Strangers-By-Nature-plisten.mp3"
+        },{
+          "id": "10",
+          "name": "To Be Loved",
+          "artist": "Adele",
+          "url": "/Music/30/Adele-To-Be-Loved-plisten.mp3"
+        },{
+          "id": "11",
+          "name": "Woman Like Me",
+          "artist": "Adele",
+          "url": "/Music/30/Adele-Woman-Like-Me-plisten.mp3"
+        }
+    ]
+  },  
+  {
+    "Album_Name": "Hit Me Hard And Soft",
+    "Artist_name": "Billie Eilish",
+    "Cover": "/assets/images/lana del ray.jpg",
+    "tracks": [
+      {
+      "id": "1",
+      "name": "Birds of a feather",
+      "artist": "Billie Eilish",
+      "url": "/Music/HIT-ME-HARD-AND-SOFT/BIRDS OF A FEATHER - Billie Eilish (320).mp3"
+      },
+    {
+      "id": "2",
+      "name": "Bittersuite",
+      "artist": "Billie Eilish",
+      "url": "/Music/HIT-ME-HARD-AND-SOFT/BITTERSUITE - Billie Eilish (320).mp3"
+    },
+    {
+      "id": "3",
+      "name": "Blue",
+      "artist": "Billie Eilish",
+      "url": "/Music/HIT-ME-HARD-AND-SOFT/BLUE - Billie Eilish (320).mp3"
+    },
+    {
+      "id": "4",
+      "name": "CHIHIRO",
+      "artist": "Billie Eilish",
+      "url": "/Music/HIT-ME-HARD-AND-SOFT/CHIHIRO - Billie Eilish (320).mp3"
+    },
+    {
+      "id": "5",
+      "name": "L AMOUR DE MA VIE",
+      "artist": "Billie Eilish",
+      "url": "/Music/HIT-ME-HARD-AND-SOFT/L AMOUR DE MA VIE - Billie Eilish (320).mp3"
+    }
+    ]
+  },
+  
+  {
+    "Album_Name": "The Death Of Slim Shady",
+    "Artist_name": "Eminem",
+    "Cover": "/assets/images/eminem.png",
+    "tracks": [
+    {
+      "id": "1",
+      "name": "Habits",
+      "artist": "Eminem",
+      "url": "/Music/The-Death-of-Slim-Shady/Eminem-Habits-plisten.mp3"
+    },
+    {
+      "id": "2",
+      "name": "Head Honcho",
+      "artist": "Eminem",
+      "url": "/Music/The-Death-of-Slim-Shady/Eminem-Head-Honcho-plisten.mp3"
+    },
+    {
+      "id": "3",
+      "name": "Houdini",
+      "artist": "Eminem",
+      "url": "/Music/The-Death-of-Slim-Shady/Eminem-Houdini-plisten.mp3"
+    },
+    {
+      "id": "4",
+      "name": "Kyrie & Luka",
+      "artist": "Eminem",
+      "url": "/Music/The-Death-of-Slim-Shady/Eminem-Kyrie-&-Luka-plisten.mp3"
+    },
+    {
+      "id": "5",
+      "name": "Like My Shit",
+      "artist": "Eminem",
+      "url": "/Music/The-Death-of-Slim-Shady/Eminem-Like-My-Shit-plisten.mp3"
+    },
+    {
+        "id": "5",
+        "name": "Lucifer",
+        "artist": "Eminem",
+        "url": "/Music/The-Death-of-Slim-Shady/Eminem-Lucifer-plisten.mp3"
+      },{
+        "id": "6",
+        "name": "Renaissance",
+        "artist": "Eminem",
+        "url": "/Music/The-Death-of-Slim-Shady/Eminem-Renaissance-plisten.mp3"
+      },{
+        "id": "7",
+        "name": "Road Rage",
+        "artist": "Eminem",
+        "url": "/Music/The-Death-of-Slim-Shady/Eminem-Road-Rage-plisten.mp3"
+      },{
+        "id": "8",
+        "name": "Sombody Save Me",
+        "artist": "Eminem",
+        "url": "/Music/The-Death-of-Slim-Shady/Eminem-Somebody-Save-Me-plisten.mp3"
+      },{
+        "id": "9",
+        "name": "Temporary",
+        "artist": "Eminem",
+        "url": "/Music/The-Death-of-Slim-Shady/Eminem-Temporary-plisten.mp3"
+      },{
+        "id": "10",
+        "name": "Tobey",
+        "artist": "Eminem",
+        "url": "/Music/The-Death-of-Slim-Shady/Eminem-Tobey-plisten.mp3"
+      },{
+        "id": "11",
+        "name": "Trouble",
+        "artist": "Eminem",
+        "url": "/Music/The-Death-of-Slim-Shady/Eminem-Trouble-plisten.mp3"
+      },
+      {
+        "id": "12",
+        "name": "Guess who''s back",
+        "artist": "Eminem",
+        "url": "/Music/The-Death-of-Slim-Shady/Guess-Who s-Back-(skit)-plisten.mp3"
+      },{
+        "id": "13",
+        "name": "All You Got (skit)",
+        "artist": "Eminem",
+        "url": "/Music/The-Death-of-Slim-Shady/Eminem-All-You-Got-(skit)-plisten.mp3"
+      },{
+        "id": "14",
+        "name": "Antichrist",
+        "artist": "Eminem",
+        "url": "/Music/The-Death-of-Slim-Shady/Eminem-Antichrist-plisten.mp3"
+      },{
+        "id": "15",
+        "name": "Bad One",
+        "artist": "Eminem",
+        "url": "/Music/The-Death-of-Slim-Shady/Eminem-Bad-One-plisten.mp3"
+      },{
+        "id": "16",
+        "name": "Brand New Dance",
+        "artist": "Eminem",
+        "url": "/Music/The-Death-of-Slim-Shady/Eminem-Brand-New-Dance-plisten.mp3"
+      },{
+        "id": "17",
+        "name": "Breaking News (skit)",
+        "artist": "Eminem",
+        "url": "/Music/The-Death-of-Slim-Shady/Eminem-Breaking-News-(skit)-plisten.mp3"
+      },{
+        "id": "18",
+        "name": "Evil",
+        "artist": "Eminem",
+        "url": "/Music/The-Death-of-Slim-Shady/Eminem-Evil-plisten.mp3"
+      },{
+        "id": "19",
+        "name": "Fuel",
+        "artist": "Eminem",
+        "url": "/Music/The-Death-of-Slim-Shady/Eminem-Fuel-plisten.mp3"
+      },{
+        "id": "20",
+        "name": "Guilty Consience",
+        "artist": "Eminem",
+        "url": "/Music/The-Death-of-Slim-Shady/Eminem-Guilty-Conscience-2-plisten.mp3"
+      }
+    ]
+  }
+]  
+
+  
