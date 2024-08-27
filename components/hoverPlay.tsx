@@ -32,7 +32,7 @@ const Player = () => {
 
   return (
     <>
-      <div className="w-full h-[58px] bg-gradient-to-bl from-grad1 to-grad2 backdrop-blur-[250px] text-white shadow-lg flex items-center justify-between px-4 rounded-lg">
+      <div className="lg:hidden w-full h-[58px] bg-gradient-to-bl from-grad1 to-grad2 backdrop-blur-[250px] text-white shadow-lg flex items-center justify-between px-4 rounded-lg">
         <div className="flex items-center gap-x-2">
           {ImageUrl && (
             <Image

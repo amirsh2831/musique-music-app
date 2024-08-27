@@ -11,7 +11,7 @@ import Link from "next/link";
 const Library = () => {
   return (
     <>
-      <div className="max-w-screen h-screen font-popins container pt-4 relative overflow-hidden">
+      <div className="max-w-screen h-screen font-popins container pt-4 relative">
         <section className="flex items-center justify-between mb-5">
           <div className="flex gap-x-2 items-center">
             <Image
@@ -41,53 +41,59 @@ const Library = () => {
           <div className="space-y-5 mt-5 ">
             {Playlists.map((item, i) => (
               <Link href="/Library/Liked-Songs" key={item.name + i}>
-                <div className="flex items-center gap-4 text-white">
-                  <Image
-                    alt="Liked Images"
-                    src={item.image}
-                    width={68}
-                    height={68}
-                    className="size-16"
-                  />
-                  <div className="">
-                    <h3 className="text-14-regular">{item.name}</h3>
-                    <div className="flex gap-2 items-center">
-                      <MdPushPin className="text-green" />
-                      <p className="text-title_gray text-12-regular">
-                        Playlist
-                      </p>{" "}
-                      <span> . </span>{" "}
-                      <p className="text-title_gray text-12-regular">
-                        {item.count}
-                      </p>
+                <div className="flex items-center gap-4 text-white mb-4">
+                  <div className="lg:flex gap-7">
+                    <Image
+                      alt="Liked Images"
+                      src={item.image}
+                      width={68}
+                      height={68}
+                      className="size-16"
+                    />
+                    <div className="">
+                      <h3 className="text-14-regular">{item.name}</h3>
+                      <div className="flex gap-2 items-center">
+                        <MdPushPin className="text-green" />
+                        <p className="text-title_gray text-12-regular">
+                          Playlist
+                        </p>{" "}
+                        <span> . </span>{" "}
+                        <p className="text-title_gray text-12-regular">
+                          {item.count}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </Link>
             ))}
-            {ArtistFav.map((item, i) => (
-              <div
-                key={item.name + i}
-                className="flex items-center gap-4 text-white"
-              >
-                <Image
-                  alt="Artists"
-                  src={item.image}
-                  width={68}
-                  height={68}
-                  className="size-16 rounded-full"
-                />
-                <div className="">
-                  <h3 className="text-14-regular">{item.name}</h3>
-                  <div className="flex gap-2 items-center">
-                    <p className="text-title_gray text-12-regular">Artist</p>
+            <div className="lg:flex items-center gap-16 text-center shrink-0 flex-wrap">
+              {ArtistFav.map((item, i) => (
+                <div
+                  key={item.name + i}
+                  className="flex items-center gap-4 text-white lg:block mb-4"
+                >
+                  <Image
+                    alt="Artists"
+                    src={item.image}
+                    width={68}
+                    height={68}
+                    className="size-16 rounded-full lg:size-24 lg:mb-2"
+                  />
+                  <div className="">
+                    <h3 className="text-14-regular">{item.name}</h3>
+                    <div className="flex gap-2 items-center">
+                      <p className="text-title_gray text-12-regular lg:hidden">
+                        Artist
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </section>
-        <section className=" bottom-0 w-full sticky">
+        <section className=" bottom-0 w-full sticky lg:hidden">
           <BottomBar />
         </section>
       </div>

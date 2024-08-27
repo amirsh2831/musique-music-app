@@ -22,7 +22,7 @@ const App = async () => {
   console.log("sessionn name is: ", session.user?.name);
   return (
     <>
-      <div className="max-w-screen h-screen max-h-screen font-popins container pt-4 relative overflow-hidden flex flex-col justify-between">
+      <div className="h-full font-popins container pt-4 relative overflow-x-hidden">
         <section className="flex items-center justify-between">
           <div className="flex gap-x-2 items-center">
             <Image
@@ -71,7 +71,7 @@ const App = async () => {
           <Badgeer />
           <RecantSongs />
         </section>
-        <section className=" bottom-0 w-full sticky">
+        <section className=" bottom-0 w-full sticky lg:hidden">
           <BottomBar />
         </section>
       </div>

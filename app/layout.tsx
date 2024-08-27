@@ -7,7 +7,8 @@ import AudioPlayer from "@/components/AudioPlayer";
 import { AudioRefProvider } from "@/components/contexts/AudioRefProvider";
 import PlayerDrawer from "@/components/PlayerDrawer";
 import { NextAuthProvider } from "@/components/NextAuthProvider";
-
+import Sidebar from "@/components/Sidebar";
+import LargePlayerControls from "../components/LargePlayerControls";
 // const fontSans = FontSans({
 //   subsets: ["latin"],
 //   weight: ["300", "400", "500", "600", "700"],
@@ -27,14 +28,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn("min-h-screen bg-background  antialiased relative")}>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
+      <body
+        className={cn(
+          "min-h-screen bg-background  antialiased relative overflow-hidden"
+        )}
+      >
         <NextAuthProvider>
           <ThemeProvider attribute="class" defaultTheme="dark">
             <Providers>
               <AudioRefProvider>
-                <AudioPlayer />
-                {children}
-                <PlayerDrawer />
+                <div className="flex w-full h-full overflow-hidden">
+                  <Sidebar />
+                  <div className="lg:overflow-scroll w-full remove-scrollbar">
+                    <AudioPlayer />
+                    {children}
+                    <PlayerDrawer />
+                  </div>
+                </div>
+                <LargePlayerControls />
               </AudioRefProvider>
             </Providers>
           </ThemeProvider>

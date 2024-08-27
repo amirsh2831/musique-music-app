@@ -4,13 +4,12 @@ import { FiCompass } from "react-icons/fi";
 import { TbBookmarks } from "react-icons/tb";
 import { FiSearch } from "react-icons/fi";
 
-
 export const SelectionFilter = [
   "Music",
   "Podcasts",
   "Artists",
   "Events",
-  "Audio Books"
+  "Audio Books",
 ];
 
 export const TrendingData = [
@@ -18,22 +17,21 @@ export const TrendingData = [
     image: "/assets/images/tingi.jpg",
     subImage: "/assets/images/taylor.jfif",
     Name: "1999 Happy Album",
-    By: "By Jordan Peterson"
+    By: "By Jordan Peterson",
   },
   {
     image: "/assets/images/somting.png",
     subImage: "/assets/images/Travis.png",
     Name: "Best Of Mumble Rap",
-    By: "By Travis Scott"
+    By: "By Travis Scott",
   },
   {
     image: "/assets/images/somting.png",
     subImage: "/assets/images/Travis.png",
     Name: "Best Of Mumble Rap",
-    By: "By Travis Scott"
-  }
+    By: "By Travis Scott",
+  },
 ];
-
 
 export const Recant = [
   {
@@ -41,24 +39,22 @@ export const Recant = [
     Name: "Adele 30",
     metadata: "/Music/30/Metadata.json",
     PlayImage: "/assets/images/adele.jpg",
-    AlbumName: "30"
+    AlbumName: "30",
   },
   {
     image: "/assets/images/Eminemmm.png",
     Name: "The Death Of Slim ..",
     metadata: "/Music/The Death of Slim Shady/Metadata.json",
     PlayImage: "/assets/images/eminem.png",
-    AlbumName: "The-Death-of-Slim-Shady"
-
+    AlbumName: "The-Death-of-Slim-Shady",
   },
   {
     image: "/assets/images/lana del ray play.png",
     Name: "Born To Die",
     metadata: "/Music/HIT-ME-HARD-AND-SOFT/Metadata.json",
     PlayImage: "/assets/images/lana del ray.jpg",
-    AlbumName: "HIT-ME-HARD-AND-SOFT"
-
-  }
+    AlbumName: "HIT-ME-HARD-AND-SOFT",
+  },
 ];
 
 export const Playlists = [
@@ -71,62 +67,62 @@ export const Playlists = [
     image: "/assets/icons/episodes.png",
     name: "New Episodes",
     count: 11,
-  }
+  },
 ];
 
 export const ArtistFav = [
   {
     image: "/assets/images/artist1.png",
-    name: "Lolo zouai"
+    name: "Lolo zouai",
   },
   {
     image: "/assets/images/artist2.png",
-    name: "Lana del ray"
+    name: "Lana del ray",
   },
   {
     image: "/assets/images/artist1.png",
-    name: "Lolo zouai"
+    name: "Lolo zouai",
   },
   {
     image: "/assets/images/artist2.png",
-    name: "Lana del ray"
+    name: "Lana del ray",
   },
   {
     image: "/assets/images/artist1.png",
-    name: "Lolo zouai"
+    name: "Lolo zouai",
   },
   {
     image: "/@/public/assets/images/artist2.png",
-    name: "Lana del ray"
-  }
-]
+    name: "Lana del ray",
+  },
+];
 
 export const Artists = [
   {
     Name: "Billie Eilish",
-    Image: "/assets/images/Billie Eilish.png"
+    Image: "/assets/images/Billie Eilish.png",
   },
   {
     Name: "Adele",
-    Image: "/assets/images/Adele.png"
+    Image: "/assets/images/Adele.png",
   },
   {
     Name: "Eminem",
-    Image: "/assets/images/Eminem Artist.png"
+    Image: "/assets/images/Eminem Artist.png",
   },
   {
     Name: "Imagine Dragons",
-    Image: "/assets/images/Imagine Dragons.png"
+    Image: "/assets/images/Imagine Dragons.png",
   },
   {
     Name: "Drake",
-    Image: "/assets/images/Drake.png"
+    Image: "/assets/images/Drake.png",
   },
   {
     Name: "NF",
-    Image: "/assets/images/nf.png"
+    Image: "/assets/images/nf.png",
   },
-]
+];
 
 export const Songs = [
   {
@@ -149,4 +145,27 @@ export const Songs = [
     Song_name: "Chance with you",
     Artist_name: "mehro",
   },
-]
+];
+
+export const SidebarData = [
+  {
+    text: "Home",
+    icon: <LuMusic4 />,
+    url: "/",
+  },
+  {
+    text: "Explore",
+    icon: <FiCompass />,
+    url: "/Explore",
+  },
+  {
+    text: "Library",
+    icon: <TbBookmarks />,
+    url: "/Library",
+  },
+  {
+    text: "Search",
+    icon: <FiSearch />,
+    url: "/",
+  },
+];

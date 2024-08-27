@@ -9,7 +9,7 @@ const Trending = () => {
       <div className="w-max flex gap-2 remove-scrollbar overflow-scroll">
         {TrendingData.map((Data, i) => (
           <Link href="/Playlists" key={Data.Name + i}>
-            <div className=" w-[300px] h-[145px] rounded-xl relative flex-shrink-0">
+            <div className=" w-[300px] h-[162px] rounded-xl relative flex-shrink-0">
               <Image
                 alt="Trending Banner"
                 className="w-full h-full rounded-2xl"

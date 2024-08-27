@@ -103,7 +103,7 @@ export default async function PlayLists({ params }: PlaylistProps) {
         <section className="space-y-4">
           <Image
             alt="Playlist Banner"
-            src={tracksInfo[0].albumCover}
+            src={tracksInfo[0]?.albumCover}
             width={224}
             height={224}
             className="size-56 m-auto"
