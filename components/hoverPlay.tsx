@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useAppDispatch, useAppSelector } from "@/redux/store/hooks";
 import { setIsPlaying, nextTrack, previousTrack } from "@/redux/PlayerSlice";
+import { normalquery } from "@/lib/utils";
 
 const Player = () => {
   const dispatch = useAppDispatch();
@@ -44,7 +45,9 @@ const Player = () => {
             />
           )}
           <div className="text-left">
-            <h2 className="text-16-regular">{currentTrack?.title}</h2>
+            <h2 className="text-16-regular">
+              {normalquery(currentTrack.title)}
+            </h2>
             <p className="text-12-regular text-title_gray tracking-wide">
               {currentTrack?.artistName}
             </p>

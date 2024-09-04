@@ -1,14 +1,17 @@
+import {nextui} from '@nextui-org/theme';
 import type { Config } from "tailwindcss";
 
 const { fontFamily } = require("tailwindcss/defaultTheme");
 
-const config = {
+module.exports = {
   darkMode: ["class"],
+  plugins: [nextui()],
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
+    "./node_modules/@nextui-org/theme/dist/components/(button|card|image|ripple|spinner).js"
   ],
   prefix: "",
   theme: {
@@ -76,7 +79,7 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  // plugins: [require(tailwindcss-animate),nextui()],
 } satisfies Config;
 
-export default config;
+// export default config;

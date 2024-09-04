@@ -2,40 +2,44 @@ import React from "react";
 import { TbFlame } from "react-icons/tb";
 import { TrendingData } from "@/constants";
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
+import { Card, CardHeader, CardFooter } from "@nextui-org/card";
+
 const Trending = () => {
   return (
     <>
       <div className="w-max flex gap-2 remove-scrollbar overflow-scroll">
         {TrendingData.map((Data, i) => (
-          <Link href="/Playlists" key={Data.Name + i}>
-            <div className=" w-[300px] h-[162px] rounded-xl relative flex-shrink-0">
+          <Card
+            isFooterBlurred
+            className=" w-[300px] h-[162px] rounded-xl flex-shrink-0 p-0"
+            key={Data.Name + i}
+          >
+            <CardHeader className="absolute z-50 top-1 left-3 flex backdrop-blur-[100px] rounded-3xl px-3 py-1 items-start bg-black/20 w-fit">
+              <TbFlame className="text-orange-700 text-xl" />
+              <p className="text-12-regular">Trending</p>
+            </CardHeader>
+            <Image
+              alt="trending background "
+              className="w-full h-full rounded-2xl"
+              width={400}
+              height={145}
+              src={Data.image}
+            />
+            <CardFooter className=" absolute bg-black/40 bottom-2 z-10 left-2  w-fit px-3 py-1 rounded-3xl">
               <Image
-                alt="Trending Banner"
-                className="w-full h-full rounded-2xl"
-                width={400}
-                height={145}
-                src={Data.image}
+                alt="sub image"
+                src={Data.subImage}
+                width={32}
+                height={32}
+                className="size-8 rounded-md"
               />
-              <div className=" backdrop-blur-[250px] rounded-full flex gap-x-1 items-center w-fit px-3 py-1 absolute top-3 left-3">
-                <TbFlame className="text-orange-700 text-xl" />
-                <p className="text-12-regular text-white">Trending</p>
+              <div className="ml-1">
+                <h4 className="text-14-regular">{Data.Name}</h4>
+                <p className="text-12-regular text-title_gray">{Data.By}</p>
               </div>
-              <div className=" backdrop-blur-[250px] rounded-full flex gap-x-4 items-center w-fit px-3 py-1 absolute bottom-3 left-3">
-                <Image
-                  alt="sub image"
-                  src={Data.subImage}
-                  width={32}
-                  height={32}
-                  className="size-8 rounded-md"
-                />
-                <div>
-                  <h4 className="text-14-regular text-white">{Data.Name}</h4>
-                  <p className="text-12-regular text-white">{Data.By}</p>
-                </div>
-              </div>
-            </div>
-          </Link>
+            </CardFooter>
+          </Card>
         ))}
       </div>
     </>

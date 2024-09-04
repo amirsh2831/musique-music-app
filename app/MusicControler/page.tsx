@@ -25,6 +25,7 @@ import {
 } from "@/redux/PlayerSlice";
 import { Button } from "@/components/ui/button";
 import { useAudioRef } from "@/components/contexts/AudioRefProvider";
+import { normalquery } from "@/lib/utils";
 
 const PlayerControls = () => {
   const dispatch = useAppDispatch();
@@ -67,7 +68,9 @@ const PlayerControls = () => {
             />
           )}
           <div>
-            <h1 className="text-3xl text-white">{currentTrack?.title}</h1>
+            <h1 className="text-3xl text-white">
+              {normalquery(currentTrack?.title)}
+            </h1>
             <p className="text-16-regular text-title_gray">
               {currentTrack?.artistName}
             </p>

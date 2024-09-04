@@ -18,7 +18,6 @@ const LikedSongs = () => {
       if (response.ok) {
         const data = await response.json();
         setLikedSongs(data.likedSongs);
-        console.log(data.likedSongs);
       } else {
         console.error("Failed to fetch liked songs");
       }
@@ -26,7 +25,6 @@ const LikedSongs = () => {
 
     fetchLikedSongs();
   }, []);
-  console.log(likedSongs);
   return (
     <>
       <div className="max-w-screen h-screen font-popins container pt-4 relative overflow-hidden space-y-5 glass remove-scrollbar">

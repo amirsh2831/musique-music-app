@@ -46,14 +46,14 @@ export const Recant = [
     Name: "The Death Of Slim ..",
     metadata: "/Music/The Death of Slim Shady/Metadata.json",
     PlayImage: "/assets/images/eminem.png",
-    AlbumName: "The-Death-of-Slim-Shady",
+    AlbumName: "the-death-of-slim-shady",
   },
   {
     image: "/assets/images/lana del ray play.png",
     Name: "Born To Die",
     metadata: "/Music/HIT-ME-HARD-AND-SOFT/Metadata.json",
     PlayImage: "/assets/images/lana del ray.jpg",
-    AlbumName: "HIT-ME-HARD-AND-SOFT",
+    AlbumName: "hit-me-hard-and-soft",
   },
 ];
 
@@ -150,22 +150,22 @@ export const Songs = [
 export const SidebarData = [
   {
     text: "Home",
-    icon: <LuMusic4 />,
+    icon: <LuMusic4 className="text-xl" />,
     url: "/",
   },
   {
     text: "Explore",
-    icon: <FiCompass />,
+    icon: <FiCompass className="text-xl" />,
     url: "/Explore",
   },
   {
     text: "Library",
-    icon: <TbBookmarks />,
+    icon: <TbBookmarks className="text-xl" />,
     url: "/Library",
   },
   {
     text: "Search",
-    icon: <FiSearch />,
+    icon: <FiSearch className="text-xl" />,
     url: "/",
   },
 ];

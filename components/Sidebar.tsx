@@ -1,6 +1,7 @@
 import React from "react";
 import { SidebarData } from "../constants";
 import Link from "next/link";
+import { Button } from "@nextui-org/button";
 
 const Sidebar = () => {
   return (
@@ -10,10 +11,14 @@ const Sidebar = () => {
         <div className="space-y-2">
           {SidebarData.map((item, i) => (
             <Link href={item.url} key={item.text + i}>
-              <div className="flex gap-4 pl-2 cursor-pointer hover:bg-green transition-colors hover:shadow-sm w-full h-12 rounded-md items-center">
-                <span className="text-2xl text-white">{item.icon}</span>
+              <Button
+                variant="shadow"
+                radius="md"
+                startContent={item.icon}
+                className="hover:bg-green transition-colors w-full h-12 items-center justify-start bg-transparent shadow-none"
+              >
                 <p className="text-18-bold text-white">{item.text}</p>
-              </div>
+              </Button>
             </Link>
           ))}
         </div>

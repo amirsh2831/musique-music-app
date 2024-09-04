@@ -12,19 +12,40 @@ import FavArtists from "@/components/FavArtists";
 import SearchResults from "@/components/SearchResults";
 import { fetchSearchResults } from "@/lib/utils";
 import { useState } from "react";
+import { lowerquery } from "@/lib/utils";
 
 const App = () => {
   const [results, setResults] = useState({ albums: [], tracks: [] });
+  const fetchSearchResults = async (searchQuery: string) => {
+    try {
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/Search/${encodeURIComponent(
+          searchQuery
+        )}`,
+        { cache: "no-store" }
+      );
 
+      if (!res.ok) {
+        throw new Error("Failed to fetch songs");
+      }
+      const songs = await res.json();
+      return songs;
+    } catch (error) {
+      console.error("Error fetching album songs:", error);
+      return [];
+    }
+  };
   const handleSearch = async (query: string) => {
     if (!query) {
       setResults({ albums: [], tracks: [] });
       return;
     }
-
-    const searchResults = await fetchSearchResults(query);
+    const modifiedQuery = lowerquery(query);
+    console.log(modifiedQuery);
+    const searchResults = await fetchSearchResults(modifiedQuery);
     setResults(searchResults);
   };
+
   const hasResults = results.albums.length > 0 || results.tracks.length > 0;
   return (
     <>
@@ -50,7 +71,7 @@ const App = () => {
               <FavArtists />
               <FavArtists />
             </section>
-            <section className=" bottom-0 w-full sticky">
+            <section className=" bottom-0 w-full sticky lg:hidden">
               <BottomBar />
             </section>
           </>

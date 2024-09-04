@@ -55,7 +55,12 @@ const HeartIcon = ({ songId }: HeartIconProps) => {
 
   return (
     <>
-      <button onClick={handleClick}>
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          handleClick();
+        }}
+      >
         {liked ? <FaHeart /> : <FaRegHeart />}
       </button>
     </>

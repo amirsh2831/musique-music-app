@@ -19,7 +19,8 @@ import {
 } from "@/redux/PlayerSlice";
 import { useAppDispatch, useAppSelector } from "@/redux/store/hooks";
 import Image from "next/image";
-import { Button } from "./ui/button";
+import { Button } from "@nextui-org/button";
+import { normalquery } from "@/lib/utils";
 
 const LargePlayerControls = () => {
   const dispatch = useAppDispatch();
@@ -65,7 +66,9 @@ const LargePlayerControls = () => {
               )}
               <div className="text-white">
                 <h2 className="text-14-regular">
-                  {currentTrack?.title ? currentTrack.title : "Loading"}
+                  {currentTrack?.title
+                    ? normalquery(currentTrack.title)
+                    : "Loading"}
                 </h2>
                 <p className="text-12-regular">
                   {currentTrack?.artistName
@@ -77,17 +80,33 @@ const LargePlayerControls = () => {
           </div>
           <div className="flex flex-col items-center flex-1 w-full">
             <div className=" flex justify-between items-center text-title_gray text-xl w-[60%] mx-auto">
-              <FaShuffle />
-              <FaBackwardStep onClick={handlePreviousTrack} />
-              <Button onClick={handlePlayPause} className="">
-                {isPlaying ? (
-                  <FaPauseCircle className={`text-4xl text-white`} />
-                ) : (
-                  <FaPlayCircle className={`text-4xl text-white`} />
-                )}
+              <Button isIconOnly className="rounded-full bg-transparent">
+                <FaShuffle className="text-xl text-title_gray" />
               </Button>
-              <FaForwardStep onClick={handleNextTrack} />
-              <FaRepeat />
+              <Button
+                isIconOnly
+                className="rounded-full bg-transparent"
+                onClick={handlePreviousTrack}
+              >
+                <FaBackwardStep className="text-xl text-title_gray" />
+              </Button>
+              <Button
+                isIconOnly
+                onClick={handlePlayPause}
+                className="text-4xl text-white rounded-full bg-transparent p-1 w-12 h-12"
+              >
+                {isPlaying ? <FaPauseCircle /> : <FaPlayCircle />}
+              </Button>
+              <Button
+                isIconOnly
+                className="rounded-full bg-transparent"
+                onClick={handleNextTrack}
+              >
+                <FaForwardStep className="text-xl text-title_gray" />
+              </Button>
+              <Button isIconOnly className="rounded-full bg-transparent">
+                <FaRepeat className="text-xl text-title_gray" />
+              </Button>
             </div>
             <div className="flex gap-2 w-full">
               <p>
@@ -118,10 +137,20 @@ const LargePlayerControls = () => {
           </div>
           <div className="w-[15%] justify-self-end flex-1">
             <div className="flex items-center justify-end text-3xl text-title_gray gap-4">
-              <LuMonitorSpeaker />
-              <MdVolumeUp />
+              <Button
+                isIconOnly
+                className="rounded-full bg-transparent text-xl text-title_gray"
+              >
+                <LuMonitorSpeaker />
+              </Button>
+              <Button
+                isIconOnly
+                className="rounded-full bg-transparent text-xl text-title_gray"
+              >
+                <MdVolumeUp />
+              </Button>
               <Slider
-                defaultValue={[33]}
+                defaultValue={[100]}
                 max={100}
                 step={5}
                 className=" w-[156px]"

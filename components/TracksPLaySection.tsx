@@ -6,6 +6,7 @@ import { BsArrowDownCircle } from "react-icons/bs";
 import { BsThreeDots } from "react-icons/bs";
 import { useAppDispatch, useAppSelector } from "@/redux/store/hooks";
 import { SetImage, setPlaylist, Track } from "@/redux/PlayerSlice";
+import { Button } from "@nextui-org/button";
 
 interface TrackProps {
   id: string;
@@ -34,19 +35,23 @@ const TracksPLaySection = ({ tracks }: { tracks: TrackProps[] }) => {
         <BsArrowDownCircle />
         <BsThreeDots />
       </div>
-      <Image
-        alt="Play Button"
-        src="/assets/icons/playButton.svg"
-        width={56}
-        height={56}
-        className="size-14 shadow-lg"
-        onClick={() => {
-          handlePlaylistSelect(
-            tracks,
-            tracks[0].albumCover ? tracks[0].albumCover : " "
-          );
-        }}
-      />
+      <Button
+        isIconOnly
+        className="w-16 h-16 rounded-full shadow-lg bg-transparent"
+      >
+        <Image
+          alt="Play Button"
+          src="/assets/icons/playButton.svg"
+          width={56}
+          height={56}
+          onClick={() => {
+            handlePlaylistSelect(
+              tracks,
+              tracks[0].albumCover ? tracks[0].albumCover : " "
+            );
+          }}
+        />
+      </Button>
     </>
   );
 };
