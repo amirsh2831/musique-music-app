@@ -41,9 +41,10 @@ const App = () => {
       return;
     }
     const modifiedQuery = lowerquery(query);
-    console.log(modifiedQuery);
-    const searchResults = await fetchSearchResults(modifiedQuery);
-    setResults(searchResults);
+    if(modifiedQuery) {
+      const searchResults = await fetchSearchResults(modifiedQuery);
+      setResults(searchResults);
+    }
   };
 
   const hasResults = results.albums.length > 0 || results.tracks.length > 0;
