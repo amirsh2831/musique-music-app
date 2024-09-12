@@ -90,11 +90,13 @@ export const formatDateTime = (
 //   ]);
 
 export const lowerquery = (query: string) => {
+  if (!query) return;
   const lowerQuery = query.replace(/\s+/g, "-").toLowerCase();
   return lowerQuery;
 };
 
 export const normalquery = (query: string) => {
+  if (!query) return;
   const modStr = query.replace(/-/g, " ");
   const normalQuery = modStr[0].toUpperCase() + modStr.slice(1);
   return normalQuery;
