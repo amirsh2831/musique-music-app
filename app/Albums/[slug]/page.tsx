@@ -22,7 +22,7 @@ export default async function PlayLists({ params }: PlaylistProps) {
   const fetchAlbumSongs = async (albumTitle: string) => {
     try {
       const res = await fetch(
-        `/api/MusicData/${encodeURIComponent(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/MusicData/${encodeURIComponent(
           albumTitle
         )}`,
         { cache: "no-store" }
