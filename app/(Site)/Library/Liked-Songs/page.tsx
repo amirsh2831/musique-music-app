@@ -13,8 +13,9 @@ const LikedSongs = () => {
   useEffect(() => {
     const fetchLikedSongs = async () => {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/Library/get-liked-songs`
-      );
+        `/api/Library/get-liked-songs`, {
+          method: "GET,
+        });
       if (response.ok) {
         const data = await response.json();
         setLikedSongs(data.likedSongs);
