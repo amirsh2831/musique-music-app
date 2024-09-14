@@ -14,7 +14,7 @@ const LikedSongs = () => {
     const fetchLikedSongs = async () => {
       const response = await fetch(
         `/api/Library/get-liked-songs`, {
-          method: "GET,
+          method: "GET",
         });
       if (response.ok) {
         const data = await response.json();
