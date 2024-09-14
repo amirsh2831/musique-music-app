@@ -19,10 +19,10 @@ const App = () => {
   const fetchSearchResults = async (searchQuery: string) => {
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/Search/${encodeURIComponent(
+        `/api/Search/${encodeURIComponent(
           searchQuery
         )}`,
-        { cache: "no-store" }
+        { cache: "no-store", method: "GET", }
       );
 
       if (!res.ok) {
