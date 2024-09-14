@@ -15,7 +15,7 @@ const HeartIcon = ({ songId }: HeartIconProps) => {
     const checkIfLiked = async () => {
       try {
         const res = await fetch(
-          `${process.env.VERCEL_URL}/api/Library/get-liked-songs`, {
+          `/api/Library/get-liked-songs`, {
             method: "GET"
           });
 
