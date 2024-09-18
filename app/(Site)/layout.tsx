@@ -22,14 +22,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-                <div className="flex w-full h-full overflow-hidden">
-                  <Sidebar />
-                  <div className="lg:overflow-scroll w-full remove-scrollbar">
-                    <AudioPlayer />
-                    {children}
-                    <PlayerDrawer />
-                  </div>
-                </div>
-                <LargePlayerControls />
+    <>
+    <div className="flex w-full h-full overflow-hidden">
+      <Sidebar />
+      <div className="lg:overflow-scroll w-full remove-scrollbar">
+        <AudioPlayer />
+        {children}
+        <PlayerDrawer />
+      </div>
+    </div>
+    <LargePlayerControls />
+    
+    </>
   );
 }
