@@ -9,7 +9,7 @@ import BottomBar from "@/components/BottomBar";
 import Image from "next/image";
 import memoji from "@/public/assets/images/memoji.png";
 import Link from "next/link";
-import PlayerControls from "./MusicControler/page";
+import PlayerControls from "../MusicControler/page";
 
 import { getServerSession } from "next-auth/next";
 import { options } from "@/app/api/auth/[...nextauth]/options";

@@ -40,15 +40,7 @@ export default function RootLayout({
           <ThemeProvider attribute="class" defaultTheme="dark">
             <Providers>
               <AudioRefProvider>
-                <div className="flex w-full h-full overflow-hidden">
-                  <Sidebar />
-                  <div className="lg:overflow-scroll w-full remove-scrollbar">
-                    <AudioPlayer />
                     {children}
-                    <PlayerDrawer />
-                  </div>
-                </div>
-                <LargePlayerControls />
               </AudioRefProvider>
             </Providers>
           </ThemeProvider>
