@@ -67,7 +67,7 @@ const Tracks = ({ tracks }: { tracks: TrackProps[] }) => {
           </CardBody>
         </Card>
       ))}
-            <div className="hidden lg:block">
+            <div className="lg:block">
         <br />
         <br />
         <br />
