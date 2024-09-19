@@ -9,7 +9,7 @@ const BottomBar = () => {
     <>
       <div className="w-full flex justify-between items-center bg-background py-2 fixed bottom-0 lg:hidden">
         <Link href="/">
-          <div className="flex flex-col items-center justify-center gap-y-1">
+          <div className="flex flex-col items-center justify-center gap-y-1 pl-3">
             <LuMusic4 className="text-3xl text-green" />
             <p className="text-[12px] font-normal text-green">Music</p>
           </div>
@@ -27,7 +27,7 @@ const BottomBar = () => {
           </div>
         </Link>
         <Link href="/">
-          <div className="flex flex-col items-center justify-center gap-y-1">
+          <div className="flex flex-col items-center justify-center gap-y-1 pr-3">
             <FiSearch className="text-3xl text-title_gray" />
             <p className="text-[12px] font-normal text-title_gray">Search</p>
           </div>
