@@ -80,9 +80,7 @@ export default async function PlayLists({ params }: PlaylistProps) {
         </section>
       </div>
 
-      <section className="bottom-0 w-full sticky z-10 px-3 lg:hidden">
-        <BottomBar />
-      </section>
+
     </>
   );
 }

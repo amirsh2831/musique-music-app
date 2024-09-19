@@ -8,7 +8,7 @@ import PlayerDrawer from "@/components/PlayerDrawer";
 import { NextAuthProvider } from "@/components/NextAuthProvider";
 import Sidebar from "@/components/Sidebar";
 import LargePlayerControls from "@/components/LargePlayerControls";
-
+import BottomBar from "@/components/BottomBar";
 
 export const metadata: Metadata = {
   title: "Musique",
@@ -32,6 +32,7 @@ export default function RootLayout({
       </div>
     </div>
     <LargePlayerControls />
+    <BottomBar/>
     
     </>
   );

@@ -72,9 +72,6 @@ const App = () => {
               <FavArtists />
               <FavArtists />
             </section>
-            <section className=" bottom-0 w-full sticky lg:hidden">
-              <BottomBar />
-            </section>
           </>
         )}
       </div>

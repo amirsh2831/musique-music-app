@@ -71,9 +71,6 @@ const App = async () => {
           <Badgeer />
           <RecantSongs />
         </section>
-        <section className=" bottom-0 w-full sticky lg:hidden">
-          <BottomBar />
-        </section>
       </div>
     </>
   );

@@ -7,7 +7,7 @@ import Link from "next/link";
 const BottomBar = () => {
   return (
     <>
-      <div className="w-full flex justify-between items-center bg-background py-2">
+      <div className="w-full flex justify-between items-center bg-background py-2 fixed bottom-0 lg:hidden">
         <Link href="/">
           <div className="flex flex-col items-center justify-center gap-y-1">
             <LuMusic4 className="text-3xl text-green" />

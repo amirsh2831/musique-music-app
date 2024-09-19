@@ -93,9 +93,7 @@ const Library = () => {
             </div>
           </div>
         </section>
-        <section className=" bottom-0 w-full sticky lg:hidden">
-          <BottomBar />
-        </section>
+
       </div>
     </>
   );

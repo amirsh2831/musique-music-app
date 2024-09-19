@@ -63,9 +63,6 @@ const LikedSongs = () => {
           <Tracks tracks={likedSongs} />
         </section>
       </div>
-      <section className=" bottom-0 w-full sticky z-10 px-3">
-        <BottomBar />
-      </section>
     </>
   );
 };
