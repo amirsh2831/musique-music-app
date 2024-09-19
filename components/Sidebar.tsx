@@ -10,7 +10,7 @@ const Sidebar = () => {
         <h1 className="sub-header text-white">Wellcome to Musique</h1>
         <div className="space-y-2">
           {SidebarData.map((item, i) => (
-            <Link href={item.url} key={item.text + i}>
+            <Link href="/" key={item.text + i}>
               <Button
                 variant="shadow"
                 radius="md"
