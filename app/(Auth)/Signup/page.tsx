@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/form";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import { Button } from "@nextui-org/button";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -105,8 +105,9 @@ const Signup = () => {
   });
 
   return (
-    <>
-      <div className="w-screen h-screen overflow-hidden bg-background container pt-4 space-y-4">
+        <>
+    <div className="w-screen h-screen overflow-hidden bg-background container flex flex-col justify-center">
+ <div className="h-max w-full m-auto md:w-[500px] md:p-16 p-4 md:border border-gray-800 rounded-md space-y-4">
         <h1 className="text-18-bold">
           Sign up to our great app to unlock the world of musique
         </h1>
@@ -120,8 +121,8 @@ const Signup = () => {
                   <FormLabel>Email</FormLabel>
                   <FormControl>
                     <Input
-                      className="bg-slate-950 w-full"
-                      placeholder="amirsh"
+                      className="bg-gray w-full"
+                      placeholder="Email Address"
                       {...field}
                       type="email"
                     />
@@ -138,8 +139,8 @@ const Signup = () => {
                   <FormLabel>Username</FormLabel>
                   <FormControl>
                     <Input
-                      className="bg-slate-950 w-full"
-                      placeholder="amirsh"
+                      className="bg-gray w-full"
+                      placeholder="Profile Name"
                       {...field}
                       type="name"
                     />
@@ -156,8 +157,8 @@ const Signup = () => {
                   <FormLabel>Password</FormLabel>
                   <FormControl>
                     <Input
-                      className="bg-slate-950 w-full"
-                      placeholder="amirsh2831"
+                      className="bg-gray w-full"
+                      placeholder="Password"
                       {...field}
                       type="password"
                     />
@@ -175,8 +176,8 @@ const Signup = () => {
                   <FormLabel>Confirm Password</FormLabel>
                   <FormControl>
                     <Input
-                      className="bg-slate-950 w-full"
-                      placeholder="amirsh2831"
+                      className="bg-gray w-full"
+                      placeholder="Confirm Password"
                       {...field}
                       type="password"
                     />
@@ -194,14 +195,16 @@ const Signup = () => {
             </Button>
             <span className="text-title_gray text-14-regular">
               Already have an account?{" "}
-              <Link href="/Signup" className="underline text-blue-800">
+              <Link href="/Login" className="underline text-blue-800">
                 Login
               </Link>
             </span>
           </form>
         </Form>
       </div>
-    </>
+
+    </div>
+         </>
   );
 };
 

@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/form";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import { Button } from "@nextui-org/button";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -62,7 +62,8 @@ const Login = () => {
 
   return (
     <>
-      <div className="w-screen h-screen overflow-hidden bg-background container pt-4 space-y-4">
+    <div className="w-screen h-screen bg-background container flex flex-col justify-center">
+ <div className="lg:w-[500px] w-full h-max m-auto space-y-4 border p-6 border-gray-800 rounded-md">
         <h1 className="text-18-bold">
           Login with your cridentials to access thousends of popular songs
         </h1>
@@ -76,7 +77,7 @@ const Login = () => {
                   <FormLabel>Username</FormLabel>
                   <FormControl>
                     <Input
-                      className="bg-slate-950 w-full"
+                      className="bg-gray w-full"
                       placeholder="amirsh"
                       {...field}
                       type="name"
@@ -88,7 +89,7 @@ const Login = () => {
                   <FormMessage />
                 </FormItem>
               )}
-            />
+              />
             <FormField
               control={form.control}
               name="password"
@@ -97,7 +98,7 @@ const Login = () => {
                   <FormLabel>Password</FormLabel>
                   <FormControl>
                     <Input
-                      className="bg-slate-950 w-full"
+                      className="bg-gray w-full"
                       placeholder="amirsh2831"
                       {...field}
                       type="password"
@@ -123,7 +124,9 @@ const Login = () => {
           </form>
         </Form>
       </div>
-    </>
+
+    </div>
+         </>
   );
 };
 
