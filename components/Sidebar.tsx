@@ -6,7 +6,7 @@ import { Button } from "@nextui-org/button";
 import {useState} from "react";
 const Sidebar = () => {
         const [listItem, setListItem] = useState(1);
-        const handleListItem = (id) => {
+        const handleListItem = (id:number) => {
                 setListItem(id)
         }
   return (
