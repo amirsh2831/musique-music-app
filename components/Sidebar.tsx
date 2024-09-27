@@ -15,12 +15,12 @@ const Sidebar = () => {
         <h1 className="sub-header text-white">Wellcome to Musique</h1>
         <div className="space-y-2">
           {SidebarData.map((item, i) => (
-            <Link href={item.url} key={item.text + i} onClick={() => handleListItem(i + 1)}>
+            <Link href={item.url} key={item.text + i} onClick={() => handleListItem(item.id)}>
               <Button
                 variant="shadow"
                 radius="md"
                 startContent={item.icon}
-                className={`hover:bg-green transition-colors w-full h-12 items-center justify-start bg-transparent shadow-none ${listItem - 1 === i ? "bg-green" : " "}`}
+                className={`hover:bg-green transition-colors w-full h-12 items-center justify-start bg-transparent shadow-none ${listItem === item.id ? "bg-green" : " "}`}
                >
                 <p className="text-18-bold text-white">{item.text}</p>
               </Button>

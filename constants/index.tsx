@@ -149,21 +149,28 @@ export const Songs = [
 
 export const SidebarData = [
   {
+    id: 1,
     text: "Home",
     icon: <LuMusic4 className="text-xl" />,
     url: "/",
   },
   {
+    id: 2,
+    text: "Home",
     text: "Explore",
     icon: <FiCompass className="text-xl" />,
     url: "/Explore",
   },
   {
+    id: 3,
+    text: "Home",
     text: "Library",
     icon: <TbBookmarks className="text-xl" />,
     url: "/Library",
   },
   {
+    id: 4,
+    text: "Home",
     text: "Search",
     icon: <FiSearch className="text-xl" />,
     url: "/",
