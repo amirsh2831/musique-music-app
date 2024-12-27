@@ -51,7 +51,7 @@ const LargePlayerControls = () => {
 
   return (
     <>
-      <div className="w-screen max-h-24 bg-gray-900 bottom-0 px-6 py-2 hidden lg:block sticky overflow-x-hidden border-t-2 border-gray-800">
+      <div className="w-screen max-h-24 bg-gray-900 bottom-0 px-6 py-2 hidden lg:block fixed overflow-x-hidden border-t-2 border-gray-800">
         <div className="w-full flex items-center">
           <div className="flex-1">
             <div className="flex items-center gap-x-2 ">

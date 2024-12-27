@@ -9,6 +9,7 @@ import { NextAuthProvider } from "@/components/NextAuthProvider";
 import Sidebar from "@/components/Sidebar";
 import LargePlayerControls from "@/components/LargePlayerControls";
 import BottomBar from "@/components/BottomBar";
+import { PageContextProvider } from "@/components/contexts/PageContext";
 
 export const metadata: Metadata = {
   title: "Musique",
@@ -23,17 +24,19 @@ export default function RootLayout({
 }>) {
   return (
     <>
-    <div className="flex w-full h-full overflow-hidden">
-      <Sidebar />
-      <div className="lg:overflow-scroll w-full remove-scrollbar">
-        <AudioPlayer />
-        {children}
-        <PlayerDrawer />
+    <PageContextProvider>
+
+      <div className="flex w-full h-full relative">
+        <Sidebar />
+        <div className="lg:overflow-scroll w-full relative remove-scrollbar">
+          <AudioPlayer />
+          {children}
+          <PlayerDrawer />
+        </div>
       </div>
-    </div>
-    <LargePlayerControls />
-    <BottomBar/>
-    
+      <LargePlayerControls />
+      <BottomBar />
+    </PageContextProvider>
     </>
   );
 }

@@ -12,16 +12,16 @@ const Trending = () => {
         {TrendingData.map((Data, i) => (
           <Card
             isFooterBlurred
-            className=" w-[300px] h-[162px] rounded-xl flex-shrink-0 p-0"
+            className=" lg:w-[400px] lg:h-[224px] w-[300px] h-[162px] rounded-xl flex-shrink-0 p-0"
             key={Data.Name + i}
           >
-            <CardHeader className="absolute z-50 top-1 left-3 flex backdrop-blur-[100px] rounded-3xl px-3 py-1 items-start bg-black/20 w-fit">
-              <TbFlame className="text-orange-700 text-xl" />
-              <p className="text-12-regular">Trending</p>
+            <CardHeader className="absolute z-50 top-2 left-3 flex backdrop-blur-[100px] rounded-3xl px-3 py-1 items-center bg-black/20 w-fit">
+              <TbFlame className="text-orange-700 lg:text-xl text-md" />
+              <p className="lg:text-12-bold text-12-regular">Trending</p>
             </CardHeader>
             <Image
               alt="trending background "
-              className="w-full h-full rounded-2xl"
+              className="w-full h-full rounded-2xl "
               width={400}
               height={145}
               src={Data.image}

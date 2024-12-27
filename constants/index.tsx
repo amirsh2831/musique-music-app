@@ -35,21 +35,21 @@ export const TrendingData = [
 
 export const Recant = [
   {
-    image: "/assets/images/Adeleee.png",
+    image: "/assets/images/Adele.jpg",
     Name: "Adele 30",
     metadata: "/Music/30/Metadata.json",
     PlayImage: "/assets/images/adele.jpg",
     AlbumName: "30",
   },
   {
-    image: "/assets/images/Eminemmm.png",
+    image: "/assets/images/eminem.png",
     Name: "The Death Of Slim ..",
     metadata: "/Music/The Death of Slim Shady/Metadata.json",
     PlayImage: "/assets/images/eminem.png",
     AlbumName: "the-death-of-slim-shady",
   },
   {
-    image: "/assets/images/lana del ray play.png",
+    image: "/assets/images/lana del ray.jpg",
     Name: "Born To Die",
     metadata: "/Music/HIT-ME-HARD-AND-SOFT/Metadata.json",
     PlayImage: "/assets/images/lana del ray.jpg",

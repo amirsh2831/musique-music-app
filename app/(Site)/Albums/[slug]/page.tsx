@@ -44,10 +44,10 @@ export default async function PlayLists({ params }: PlaylistProps) {
   return (
     <>
       <div className="max-w-screen h-screen font-popins container pt-4 relative overflow-hidden space-y-5 glass remove-scrollbar">
-        <section className="space-y-2">
+        {/* <section className="space-y-2">
           <FaChevronLeft className="text-title_gray lg:hidden" />
           <div className="w-full flex gap-x-3">
-            {/* <SearchBar Rounded="3xl" Height="11" /> */}
+            <SearchBar Rounded="3xl" Height="11" />
             <Button
               type="button"
               className="dark:bg-gradient-to-bl dark:from-glass1 dark:to-glass2 h-11 rounded-3xl shadow-lg dark:text-white"
@@ -57,7 +57,7 @@ export default async function PlayLists({ params }: PlaylistProps) {
               </span>
             </Button>
           </div>
-        </section>
+        </section> */}
         <section className="space-y-4">
           <Image
             alt="Playlist Banner"

@@ -31,17 +31,11 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <body
-        className={cn(
-          "min-h-screen bg-background  antialiased relative overflow-hidden"
-        )}
-      >
+      <body className={cn(" bg-background  antialiased relative ")}>
         <NextAuthProvider>
           <ThemeProvider attribute="class" defaultTheme="dark">
             <Providers>
-              <AudioRefProvider>
-                    {children}
-              </AudioRefProvider>
+              <AudioRefProvider>{children}</AudioRefProvider>
             </Providers>
           </ThemeProvider>
         </NextAuthProvider>

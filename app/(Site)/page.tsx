@@ -10,11 +10,12 @@ import Image from "next/image";
 import memoji from "@/public/assets/images/memoji.png";
 import Link from "next/link";
 import PlayerControls from "../MusicControler/page";
-
+import { usePageContext } from "@/components/contexts/PageContext";
 import { getServerSession } from "next-auth/next";
 import { options } from "@/app/api/auth/[...nextauth]/options";
 import { redirect } from "next/navigation";
 const App = async () => {
+  // const { page, setPage } = usePageContext();
   const session = await getServerSession(options);
   if (!session) {
     redirect("/Login");
@@ -22,8 +23,8 @@ const App = async () => {
   console.log("sessionn name is: ", session.user?.name);
   return (
     <>
-      <div className="h-full font-popins container pt-4 relative overflow-x-hidden">
-        <section className="flex items-center justify-between">
+      <div className="h-full font-popins overflow-y-auto container pt-4 space-y-4 relative overflow-x-hidden">
+        <section className=" w-full flex items-center justify-between ">
           <div className="flex gap-x-2 items-center">
             <Image
               src={memoji.src}
@@ -34,7 +35,7 @@ const App = async () => {
             />
             <div className="">
               <h2 className="sub-header">{session.user?.name}</h2>
-              <p className="text-12-regular text-title_gray capitalize">
+              <p className="text-12-bold text-title_gray capitalize">
                 Welcome to musique
               </p>
             </div>
@@ -48,10 +49,10 @@ const App = async () => {
         <section className="space-y-4">
           <div className="flex items-center justify-between gap-y-2">
             <div className="gap-y-2">
-              <p className="text-12-regular text-title_gray">
+              <h3 className="text-16-regular text-white">Trending Now</h3>
+              <p className="text-14-regular text-title_gray">
                 New singles to listen to
               </p>
-              <h3 className="text-16-regular text-white">Trending Now</h3>
             </div>
             <IoChevronForwardCircleOutline className="text-2xl text-green" />
           </div>
@@ -71,6 +72,10 @@ const App = async () => {
           <Badgeer />
           <RecantSongs />
         </section>
+        <br />
+        <br />
+        <br />
+        <br />
       </div>
     </>
   );

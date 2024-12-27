@@ -52,23 +52,23 @@ const App = () => {
     <>
       <div className="max-w-screen h-screen font-popins container pt-4 relative overflow-hidden space-y-5">
         <section>
-          <h1 className="header text-white">
+          <h1 className="text-xl font-bold text-white">
             Search Your Favorite Artist Or Music Here
           </h1>
         </section>
         <section>
-          <SearchBar onSearch={handleSearch} />
+          <SearchBar onSearch={handleSearch} Height="12" />
         </section>
         {hasResults ? (
           <SearchResults results={results} />
         ) : (
           <>
             <section>
-              <h2 className="text-white sub-header">Chose Your Genre</h2>
+              <h2 className="text-white text-md font-bold">Chose Your Genre</h2>
               <Badgeer wrap={true} />
             </section>
             <section>
-              <h2 className="text-white sub-header">Chose Your Artist</h2>
+              <h2 className="text-white text-md font-bold">Chose Your Artist</h2>
               <FavArtists />
               <FavArtists />
             </section>
