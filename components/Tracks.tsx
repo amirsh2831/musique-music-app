@@ -29,7 +29,7 @@ const Tracks = ({ tracks }: { tracks: TrackProps[] }) => {
     <>
       {tracks.map((item, i) => (
         <Card
-          className="w-full mb-2 bg-transparent border-none outline-none shadow-lg"
+          className="w-full mb-2 border-none outline-none"
           key={item.id}
           onClick={(e) => {
             e.stopPropagation();
@@ -67,13 +67,12 @@ const Tracks = ({ tracks }: { tracks: TrackProps[] }) => {
           </CardBody>
         </Card>
       ))}
-            <div className="lg:block">
+      <div className="lg:block">
         <br />
         <br />
         <br />
         <br />
         <br />
-
       </div>
     </>
   );

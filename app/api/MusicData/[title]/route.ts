@@ -32,6 +32,7 @@ export async function GET(
       albumCover: album.coverUrl, // Assuming the album has a coverImage field
       artistName: album.artist.name, // Assuming artist has a name field
       albumTitle: album.title,
+      albumImage: album.coverLg,
     }));
 
     return NextResponse.json(formattedTracks);

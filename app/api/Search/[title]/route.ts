@@ -14,6 +14,7 @@ interface mergeAlbumProps {
   title: string;
   artistId: number;
   coverUrl: string | null;
+
   createdAt: Date;
   updatedAt: Date;
   artistName: string;

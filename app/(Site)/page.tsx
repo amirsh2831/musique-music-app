@@ -35,21 +35,23 @@ const App = async () => {
             />
             <div className="">
               <h2 className="sub-header">{session.user?.name}</h2>
-              <p className="text-12-bold text-title_gray capitalize">
+              <p className="text-xl font-bold text-[#f5f5f5] capitalize">
                 Welcome to musique
               </p>
             </div>
           </div>
           <div className="flex items-center justify-between gap-x-6 text-white text-3xl">
-            <FiSearch />
-            <CgMoreVertical />
+            <FiSearch className="lg:text-xl text-lg" />
+            <CgMoreVertical className="lg:text-xl text-lg" />
           </div>
         </section>
 
         <section className="space-y-4">
+          <Badgeer />
+
           <div className="flex items-center justify-between gap-y-2">
             <div className="gap-y-2">
-              <h3 className="text-16-regular text-white">Trending Now</h3>
+              <h3 className="text-lg text-[#f5f5f5] font-bold">Trending Now</h3>
               <p className="text-14-regular text-title_gray">
                 New singles to listen to
               </p>
@@ -64,12 +66,11 @@ const App = async () => {
         <section>
           <div className="flex items-end justify-between">
             <div className="gap-y-2">
+              <h3 className="text-lg text-[#f5f5f5] font-bold">Recant Songs</h3>
               <p className="text-12-regular text-title_gray">Listen Again</p>
-              <h3 className="text-16-regular text-white">Recant Songs</h3>
             </div>
             <IoChevronForwardCircleOutline className="text-2xl text-green" />
           </div>
-          <Badgeer />
           <RecantSongs />
         </section>
         <br />

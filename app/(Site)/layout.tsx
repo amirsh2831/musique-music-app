@@ -24,19 +24,18 @@ export default function RootLayout({
 }>) {
   return (
     <>
-    <PageContextProvider>
-
-      <div className="flex w-full h-full relative">
-        <Sidebar />
-        <div className="lg:overflow-scroll w-full relative remove-scrollbar">
-          <AudioPlayer />
-          {children}
-          <PlayerDrawer />
+      <PageContextProvider>
+        <div className="flex w-full h-full relative">
+          <Sidebar />
+          <div className="lg:overflow-scroll h-full w-full relative remove-scrollbar">
+            {children}
+            <AudioPlayer />
+            <PlayerDrawer />
+          </div>
         </div>
-      </div>
-      <LargePlayerControls />
-      <BottomBar />
-    </PageContextProvider>
+        <LargePlayerControls />
+        <BottomBar />
+      </PageContextProvider>
     </>
   );
 }

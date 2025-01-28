@@ -1,5 +1,3 @@
-// prisma/schema.prisma
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -7,55 +5,54 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
-  directUrl = env("DIRECT_URL")
 }
 
 model User {
-  id            String    @id @default(cuid())
-  username          String?
-  email         String?   @unique
-  password      String?
-  emailVerified DateTime?
-  image         String?
-  likedTracks Track[]  @relation("UserLikedTracks")
-  favoriteArtists Artist[] @relation("UserFavoriteArtists")
-  accounts      Account[]
-  sessions      Session[]
+  id              String    @id @default(cuid())
+  username        String?
+  email           String?   @unique
+  password        String?
+  emailVerified   DateTime?
+  image           String?
+  accounts        Account[]
+  sessions        Session[]
+  favoriteArtists Artist[]  @relation("UserFavoriteArtists")
+  likedTracks     Track[]   @relation("UserLikedTracks")
 }
 
 model Track {
   id        Int      @id @default(autoincrement())
   title     String
   artistId  Int
-  artist    Artist   @relation("ArtistTracks", fields: [artistId], references: [id])
   albumId   Int?
-  album     Album?   @relation("AlbumTracks", fields: [albumId], references: [id])
-  duration  Int      // in seconds
-  audioUrl  String   // path or URL to the audio file
-  likedBy   User[]   @relation("UserLikedTracks")
+  duration  Int
+  audioUrl  String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  album     Album?   @relation("AlbumTracks", fields: [albumId], references: [id])
+  artist    Artist   @relation("ArtistTracks", fields: [artistId], references: [id])
+  likedBy   User[]   @relation("UserLikedTracks")
 }
 
 model Artist {
-  id       Int      @id @default(autoincrement())
-  name     String
-  albums   Album[]  @relation("ArtistAlbums")
-  tracks   Track[]  @relation("ArtistTracks")
-  imageUrl String?
-  favoritedBy User[]  @relation("UserFavoriteArtists")  
-  // Add more fields if needed, such as genre, bio, etc.
+  name        String
+  imageUrl    String?
+  id          Int     @id @default(autoincrement())
+  albums      Album[] @relation("ArtistAlbums")
+  tracks      Track[] @relation("ArtistTracks")
+  favoritedBy User[]  @relation("UserFavoriteArtists")
 }
 
 model Album {
-  id        Int      @id @default(autoincrement())
-  title     String
   artistId  Int
-  artist    Artist   @relation("ArtistAlbums", fields: [artistId], references: [id])
   coverUrl  String?
-  tracks    Track[]  @relation("AlbumTracks")
   createdAt DateTime @default(now())
+  title     String
   updatedAt DateTime @updatedAt
+  id        Int      @id @default(autoincrement())
+  coverLg   String?  @db.VarChar
+  artist    Artist   @relation("ArtistAlbums", fields: [artistId], references: [id])
+  tracks    Track[]  @relation("AlbumTracks")
 }
 
 model Session {
@@ -67,20 +64,19 @@ model Session {
 }
 
 model Account {
-  id                 String  @id @default(cuid())
-  userId             String
-  type               String
-  provider           String
-  providerAccountId  String
-  refresh_token      String?  @db.Text
-  access_token       String?  @db.Text
-  expires_at         Int?
-  token_type         String?
-  scope              String?
-  id_token           String?  @db.Text
-  session_state      String?
-
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
 }

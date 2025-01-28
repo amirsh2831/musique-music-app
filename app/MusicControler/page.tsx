@@ -56,7 +56,7 @@ const PlayerControls = () => {
 
   return (
     <>
-      <div className="max-w-screen h-full font-popins container pt-4 relative overflow-hidden glass flex flex-col justify-between items-left pb-8">
+      <div className="max-w-screen h-full font-popins container pt-4 relative overflow-hidden flex flex-col justify-between items-left pb-8">
         <section className="space-y-4">
           {ImageUrl && (
             <Image

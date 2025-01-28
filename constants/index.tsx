@@ -49,10 +49,10 @@ export const Recant = [
     AlbumName: "the-death-of-slim-shady",
   },
   {
-    image: "/assets/images/lana del ray.jpg",
-    Name: "Born To Die",
+    image: "/assets/images/Billie-Eilish-Happier-Than-Ever.jpg",
+    Name: "Happier Than Ever",
     metadata: "/Music/HIT-ME-HARD-AND-SOFT/Metadata.json",
-    PlayImage: "/assets/images/lana del ray.jpg",
+    PlayImage: "/assets/images/Billie-Eilish-Happier-Than-Ever.jpg",
     AlbumName: "hit-me-hard-and-soft",
   },
 ];

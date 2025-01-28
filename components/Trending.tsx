@@ -8,7 +8,7 @@ import { Card, CardHeader, CardFooter } from "@nextui-org/card";
 const Trending = () => {
   return (
     <>
-      <div className="w-max flex gap-2 remove-scrollbar overflow-scroll">
+      <div className="w-max flex gap-8 remove-scrollbar overflow-scroll">
         {TrendingData.map((Data, i) => (
           <Card
             isFooterBlurred
